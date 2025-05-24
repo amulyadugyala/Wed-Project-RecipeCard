@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Recipe Card</h1>
+  <!-- Recipe Selector -->
+  <nav class="recipe-nav">
+    <button onclick="showRecipe('chocolate')">Chocolate Cake</button>
+    <button onclick="showRecipe('pasta')">Creamy Pasta</button>
+    <button onclick="showRecipe('salad')">Fresh Salad</button>
+  </nav>
+
+  <!-- Chocolate Cake -->
+  <div class="recipe-card" id="recipe-chocolate">
+    <h1>Chocolate Cake</h1>
+    <img src="https://i.pinimg.com/736x/b5/83/b5/b583b5617a9273163acf032f590095a3.jpg" alt="Chocolate Cake" class="dish-image" />
+
+    <div class="info">
+      <p>Prep Time: <strong>30 mins</strong></p>
+      <p>Serves: <strong>8</strong></p>
+    </div>
+
+    <button onclick="toggleSection('chocolate-ingredients')">Show Ingredients</button>
+    <ul id="chocolate-ingredients" class="hidden">
+      <li>2 cups flour</li>
+      <li>1 cup sugar</li>
+      <li>1 cup milk</li>
+      <li>½ cup cocoa powder</li>
+      <li>2 eggs</li>
+    </ul>
+
+    <button onclick="toggleSection('chocolate-steps')">Show Steps</button>
+    <ol id="chocolate-steps" class="hidden">
+      <li>Preheat the oven to 350°F (175°C).</li>
+      <li>Mix all the dry ingredients.</li>
+      <li>Add wet ingredients and mix well.</li>
+      <li>Pour into a greased pan.</li>
+      <li>Bake for 30 minutes.</li>
+    </ol>
+
+    <button onclick="startCooking('chocolate')">Start Cooking</button>
+    <button id="chocolate-next-step" class="hidden">Next Step</button>
+    <p id="chocolate-timer">Time: 00:00</p>
+
+    <div class="progress-container">
+      <div id="chocolate-progress-bar" class="progress-bar"></div>
+    </div>
+    <button onclick="window.print()">Print Recipe</button>
+  </div>
+
+  <!-- Creamy Pasta -->
+  <div class="recipe-card hidden" id="recipe-pasta">
+    <h1>Creamy Pasta</h1>
+    <img src="https://i.pinimg.com/736x/52/73/9a/52739a3877e633b3693588c8cc8fd767.jpg" alt="Creamy Pasta" class="dish-image" />
+
+    <div class="info">
+      <p>Prep Time: <strong>25 mins</strong></p>
+      <p>Serves: <strong>4</strong></p>
+    </div>
+
+    <button onclick="toggleSection('pasta-ingredients')">Show Ingredients</button>
+    <ul id="pasta-ingredients" class="hidden">
+      <li>200g penne pasta</li>
+      <li>1 cup cream</li>
+      <li>½ cup grated cheese</li>
+      <li>2 cloves garlic, minced</li>
+      <li>Salt and pepper to taste</li>
+    </ul>
+
+    <button onclick="toggleSection('pasta-steps')">Show Steps</button>
+    <ol id="pasta-steps" class="hidden">
+      <li>Boil pasta until al dente.</li>
+      <li>In a pan, sauté garlic in butter.</li>
+      <li>Add cream and bring to simmer.</li>
+      <li>Add cheese and stir until melted.</li>
+      <li>Mix pasta into sauce and serve hot.</li>
+    </ol>
+
+    <button onclick="startCooking('pasta')">Start Cooking</button>
+    <button id="pasta-next-step" class="hidden">Next Step</button>
+    <p id="pasta-timer">Time: 00:00</p>
+
+    <div class="progress-container">
+      <div id="pasta-progress-bar" class="progress-bar"></div>
+    </div>
+
+    <button onclick="window.print()">Print Recipe</button>
+  </div>
+
+  <!-- Fresh Salad -->
+  <div class="recipe-card hidden" id="recipe-salad">
+    <h1>Fresh Salad</h1>
+    <img src="https://i.pinimg.com/736x/74/54/3b/74543b886df8cdb84ac21b652f88456a.jpg" alt="Fresh Salad" class="dish-image" />
+
+    <div class="info">
+      <p>Prep Time: <strong>15 mins</strong></p>
+      <p>Serves: <strong>2</strong></p>
+    </div>
+
+    <button onclick="toggleSection('salad-ingredients')">Show Ingredients</button>
+    <ul id="salad-ingredients" class="hidden">
+      <li>1 cucumber, sliced</li>
+      <li>1 tomato, chopped</li>
+      <li>½ onion, sliced</li>
+      <li>Fresh lettuce leaves</li>
+      <li>Lemon juice and olive oil</li>
+    </ul>
+
+    <button onclick="toggleSection('salad-steps')">Show Steps</button>
+    <ol id="salad-steps" class="hidden">
+      <li>Wash and chop all vegetables.</li>
+      <li>Place lettuce on plate.</li>
+      <li>Mix cucumber, tomato, onion.</li>
+      <li>Drizzle lemon juice and olive oil.</li>
+      <li>Toss and serve immediately.</li>
+    </ol>
+
+    <button onclick="startCooking('salad')">Start Cooking</button>
+    <button id="salad-next-step" class="hidden">Next Step</button>
+    <p id="salad-timer">Time: 00:00</p>
+
+    <div class="progress-container">
+      <div id="salad-progress-bar" class="progress-bar"></div>
+    </div>
+
+    <button onclick="window.print()">Print Recipe</button>
+  </div>
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
